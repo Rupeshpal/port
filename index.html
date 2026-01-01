@@ -3,15 +3,129 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Portfolio with Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my portfolio website </title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts (DESIGN MATCH) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Playfair Display'],
+                        body: ['Poppins']
+                    },
+                    colors: {
+                        yellowMain: '#FDC435',
+                        darkText: '#25282B'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <h2> this is for test </h2>
-    <h2> this is for test </h2>
-    <h2> this is for test </h2>
+<body class="font-body text-darkText bg-white">
+
+    <!-- HEADER -->
+    <header class="flex justify-between items-center px-20 py-6">
+        <h1 class="font-heading text-xl">Portfolio</h1>
+        <nav class="space-x-8 text-sm">
+            <a>About</a>
+            <a>Projects</a>
+            <a>Contacts</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative px-20 pt-20 pb-32 grid grid-cols-2 items-center">
+
+        <div>
+            <p class="text-[#FDC435] text-xl uppercase font-bold mb-3 font-Nunito">WEB DEVELOPER</p>
+
+            <h2 class="font-heading text-5xl leading-tight mb-6" style="font-family: Playfair Display;">
+                Hello, my name<br>
+                is <span class="text-yellowMain">Marlyn Torff</span>
+            </h2>
+
+            <p class="text-gray-500 max-w-md mb-8 font-sans">
+                Short text describing your role, experience and passion.
+            </p>
+
+            <div class="flex gap-4">
+                <button class="bg-yellowMain px-6 py-2 rounded font-medium">
+                    Projects
+                </button>
+                <button class="border px-6 py-2 rounded">
+                    LinkedIn
+                </button>
+            </div>
+        </div>
+
+        <!-- IMAGE + BLOB -->
+        <div class="relative flex justify-center">
+            <div class=""></div>
+            <img src="/assets/1st.png" class="w-[465px]" />
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="px-20 pb-32">
+        <h2 class="font-heading text-4xl text-center mb-20">Projects</h2>
+
+        <div class="grid grid-cols-2 gap-20 items-center mb-24">
+            <div class="bg-white p-10 rounded-xl shadow">
+                <h3 class="font-heading text-2xl mb-4">Project Name</h3>
+                <p class="text-gray-500 mb-6">Project description here.</p>
+                <button class="border px-5 py-2 rounded">View Project</button>
+            </div>
+            <img src="/assets/2nd.jpg" class="rounded-xl">
+        </div>
+
+        <div class="grid grid-cols-2 gap-20 items-center mb-24">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" class="rounded-xl">
+            <div class="bg-white p-10 rounded-xl shadow">
+                <h3 class="font-heading text-2xl mb-4">Project Name</h3>
+                <p class="text-gray-500 mb-6">Project description here.</p>
+                <button class="border px-5 py-2 rounded">View Project</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-20 items-center">
+            <div class="bg-white p-10 rounded-xl shadow">
+                <h3 class="font-heading text-2xl mb-4">Project Name</h3>
+                <p class="text-gray-500 mb-6">Project description here.</p>
+                <button class="border px-5 py-2 rounded">View Project</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="rounded-xl">
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="px-20 pb-32">
+        <h2 class="font-heading text-4xl text-center mb-12">Projects</h2>
+
+        
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative bg-yellowMain">
+        <div class="absolute -top-24 w-full h-32 bg-yellowMain rounded-t-[100%]"></div>
+        <div class="text-center py-12">
+            <div class="flex justify-center gap-6 mb-4 text-xl">
+                🌐 📧 💼
+            </div>
+            <p>© 2026 Portfolio</p>
+        </div>
+    </footer>
 </body>
 
 </html>
